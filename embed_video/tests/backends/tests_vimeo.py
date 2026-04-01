@@ -45,6 +45,7 @@ class VimeoBackendTestCase(TestCase):
         # Parse URLs and compare without query parameters
         expected_parts = urllib.parse.urlparse(expected_url)
         actual_parts = urllib.parse.urlparse(actual_url)
+
         # Compare scheme, netloc, and path only
         self.assertEqual(
             (expected_parts.scheme, expected_parts.netloc, expected_parts.path),
